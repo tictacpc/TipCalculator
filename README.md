@@ -3,6 +3,7 @@
 **Tip Calculator** is a tip calculator application for iOS
 
 Submitted by: **ChauPN**
+
 Time spent: **8** hours spent in total
 
 ## Completed
@@ -14,5 +15,6 @@ Time spent: **8** hours spent in total
 
 ## Demo App 
 
-<img src='https://drive.google.com/open?id=0B5MhYw3OHDBhWHZZMkJnNkZQdE0/view' title='Tip Calculator' width='' alt='Video Walkthrough' />
+<img src='https://github.com/tictacpc/tipCalculatorSwift/blob/master/tipCalculator.gif' title='Tip Calculator' width='' alt='Video Walkthrough' />
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
