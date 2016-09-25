@@ -18,3 +18,7 @@ Time spent: **8** hours spent in total
 <img src='https://github.com/tictacpc/tipCalculatorSwift/blob/master/tipCalculator.gif' title='Tip Calculator' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+## Enviroment
+* Xcode 7.3
+* Swift 2.2
