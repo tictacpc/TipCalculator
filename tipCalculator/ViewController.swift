@@ -8,18 +8,49 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+var common:CommonFunc = CommonFunc()
 
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var billField: UITextField!
+    @IBOutlet weak var tipLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var tipControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        tipControl.selectedSegmentIndex = common.getPositionCurrent()
+        common.setUpdatePosition(tipControl.selectedSegmentIndex)
+        updataViewCalculate()
     }
-
+    
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func calculateTip(sender: AnyObject) {
+        
+        updataViewCalculate()
+    }
+    
+    @IBAction func changePercentControl(sender: AnyObject) {
+        common.setPositionSave(tipControl.selectedSegmentIndex)
+        updataViewCalculate()
+    }
+    
+    func updataViewCalculate(){
+        
+        common.setUpdatePosition(tipControl.selectedSegmentIndex)
+        let val = common.getResult(billField)
+        
+        tipLabel.text = val.tip
+        totalLabel.text = val.total
+    }
 
 }
 
